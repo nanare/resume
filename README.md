@@ -1,4 +1,7 @@
 
+
+
+
 # WAS Develop & Maintenance
 * ICON Tracker (Back-end) (https://tracker.icon.foundation/)
 * ICON FoundationHomePage (https://icon.foundation/?lang=en)
@@ -32,7 +35,7 @@ gunicorn & gevent Based Asynchronous RESTful API
 프로젝트 수행시 경험한 것
 - 참여 개발 팀이 250 팀이 되면서, 각기 팀들은 참여 현황을 확인하기 위해서 API Endpoint의 URI 를 통해 데이터를 추출해 가는 상황이 발생하였습니다. (Nginx Log를 통해 확인) 이에따라 호출 요청이 기하급수적으로 늘어나게 되어 t3.micro 로는 감당할 수 없게 되어 업스케일링을 진행하였습니다. 
 - gevent worker 에서 일어나는 Memory Leak(메모리 누수) 현상에 대한 조치를당시에는 취하지 못하였는데, 프로젝트를 회고하는 기간에 gevent github issue 중에서 Memory Leak 관련 내용을 확인하고 수정하게 되었습니다. 시간이 좀 더 있었다면, 각 프로세스별 --max-requests, jiter count를 수정하여 최적의 옵션을 테스트를 통해서 설정했을 것 같습니다. 
-- 특정 API는 async 방식에서는 효율적이지 않았습니다. 이는 당시에는 알지 못하였지만 CPU 연산을 고려하지 않은 API 설계가 원인이었습니다.
+- 특정 API는 async 방식에서는 효율적이지 않았습니다. 이는 당시에는 알지 못하였지만 CPU 연산을 고려하지 않은 API 설계가 원인이었습니다.  
 회고 : https://github.com/nanaones/Record/blob/master/Python/Gunicorn.md
 
 ---
