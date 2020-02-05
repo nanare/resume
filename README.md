@@ -3,14 +3,14 @@
 
 
 # WAS Develop & Maintenance
-* ICON Tracker (Back-end) (https://tracker.icon.foundation/)
-* ICON FoundationHomePage (https://icon.foundation/?lang=en)
-* TxChallenge DashBoard Page Back-End (deprecated)
+* ICON Tracker (Back-end) (https://tracker.icon.foundation/) --  [LINK](https://github.com/nanare/resume#icon-tracker-back-end-httpstrackericonfoundation)
+* ICON FoundationHomePage (https://icon.foundation/?lang=en) --  [LINK](https://github.com/nanare/resume#icon-foundationhomepage-httpsiconfoundationlangen)
+* TxChallenge DashBoard Page Back-End (deprecated) --  [LINK](https://github.com/nanare/resume#txchallenge-dashboard-page-back-end)
 
 # Public BlockChain
-* ICON(Public BlockChain) SmartContractAudit
-* ICON SmartContractAuditTool Develop
-* Blockchain training course for developers.  
+* ICON(Public BlockChain) SmartContractAudit  --  [LINK](https://github.com/nanare/resume#iconpublic-blockchain-smartcontractaudit)
+* ICON SmartContractAuditTool Develop --  [LINK](https://github.com/nanare/resume#icon-smartcontractaudit-tool-develop)
+* Blockchain training course for developers.   --  [LINK](https://github.com/nanare/resume#blockchain-training-course-for-developers)
 
 ---
 
