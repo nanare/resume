@@ -1,8 +1,4 @@
 
-
-# About nanaones
-
-
 # Work Experience
 ## Develop & Maintenance
 * ICON Tracker (Back-end) (https://tracker.icon.foundation/) --  [LINK](https://github.com/nanare/resume#icon-tracker-back-end-httpstrackericonfoundation)
@@ -27,7 +23,7 @@
     - pylint, astroid
 * Blockchain training course for developers.   --  [LINK](https://github.com/nanare/resume#blockchain-training-course-for-developers)
 
-* 시화 조력발전소 환경 조사  --  [LINK](https://github.com/nanare/resume#%EC%8B%9C%ED%99%94-%EC%A1%B0%EB%A0%A5%EB%B0%9C%EC%A0%84%EC%86%8C-%ED%99%98%EA%B2%BD-%EC%A1%B0%EC%82%AC)
+* 조력발전소 운영에 따른 해양물리변화 장기 조사연구  --  [LINK](https://github.com/nanare/resume#조력발전소-운영에-따른-해양물리변화-장기-조사연구)
     - 결측값 처리
 
 # Side Project  
@@ -146,7 +142,7 @@ StudyPie ICON BlockChain  기획, 제작, 진행
 
 ---
 
-### 시화 조력발전소 환경 조사
+### 조력발전소 운영에 따른 해양물리변화 장기 조사연구
 Matlab을 이용한 해양 관측 자료의 결측 값 처리 
 실제 관측 지원
 
