@@ -30,11 +30,11 @@
 
 # Side Project  
 
-## Psycopg-test  --  [LINK](https://github.com/nanaones/psycopg-test)  
+## Psycopg-test  --  [LINK](https://github.com/nanare/resume#psycopg-test)  
 - python
 - Docker
 
-## Psycopg-test-docker-compose  --  [LINK](https://github.com/nanaones/psycopg-test-docker-compose)  
+## Psycopg-test-docker-compose  --  [LINK](https://github.com/nanare/resume#psycopg-test-docker-composee)  
 - python
 - PostgreSQL
 - Docker-compose, ElasticSearch, Fluentd, Prometheus, Grafana, Kibana, Fluentd-exporter(Fluentd, PostgreSQL)
@@ -203,3 +203,4 @@ Tool: Docker-compose, ElasticSearch, Fluentd, Prometheus, Grafana, Kibana, Prome
 
 4. wait-for-it  
     단독으로 사용되지 않는경우, Psycopg-test Container는 PostgreSQL Container가 올라온 이후에 실행되어야 합니다. 하지만 docker-compose는 순차적으로 Container를 실행시키는 옵션이 따로 존재하지 않습니다. 따라서 wait-for-it 이라는 3rdParty 스크립트를 통해 Psycopg-test Container에 부여된 DBMS 환경변수인 $DBMS_PORT,  $DBMS_ADDRESS 들로 DBMS Container의 정상 실행 유무를 확인하여, 정상적인 응답 유무에 따라 Psycopg-test Container가 실행되도록 하였습니다. 
+
