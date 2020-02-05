@@ -2,23 +2,49 @@
 
 # About nanaones
 
+
 # Work Experience
   
   
-## WAS Develop & Maintenance
+## Develop & Maintenance
 * ICON Tracker (Back-end) (https://tracker.icon.foundation/) --  [LINK](https://github.com/nanare/resume#icon-tracker-back-end-httpstrackericonfoundation)
+    - Java(1.8) Spring
+    - Tomcat
+    - MySQL, Mybatis
+
 * ICON FoundationHomePage (https://icon.foundation/?lang=en) --  [LINK](https://github.com/nanare/resume#icon-foundationhomepage-httpsiconfoundationlangen)
+    - Java(1.8) Spring
+    - Tomcat
+    - MySQL(AWS RDS), Mybatis
+
 * TxChallenge DashBoard Page Back-End (deprecated) --  [LINK](https://github.com/nanare/resume#txchallenge-dashboard-page-back-end)
+    - python
+    - gunicorn
+    - PostgreSQL, Psycopg
 
 ## Public BlockChain
 * ICON(Public BlockChain) SmartContractAudit  --  [LINK](https://github.com/nanare/resume#iconpublic-blockchain-smartcontractaudit)
 * ICON SmartContractAuditTool Develop --  [LINK](https://github.com/nanare/resume#icon-smartcontractaudit-tool-develop)
+    - python
+    - pylint, astroid
 * Blockchain training course for developers.   --  [LINK](https://github.com/nanare/resume#blockchain-training-course-for-developers)
 
+
 # Side Project  
-TBD
+
+## Psycopg-test  --  [LINK](https://github.com/nanaones/psycopg-test)  
+- python
+- Docker
+
+## Psycopg-test-docker-compose  --  [LINK](https://github.com/nanaones/psycopg-test-docker-compose)  
+- python
+- PostgreSQL
+- Docker-compose, ElasticSearch, Fluentd, Prometheus, Grafana, Kibana, Fluentd-exporter(Fluentd, PostgreSQL)
+
 
 ---
+
+# Work Experience
 
 ### TxChallenge DashBoard Page Back-End
 
@@ -112,4 +138,68 @@ StudyPie ICON BlockChain 진행
 
 ---
 
-## icon
+# Side Project
+
+
+## Psycopg-test 
+
+1. 동일조건에서 ConnectionPool을 사용하지 않고 반복되는 쿼리를 수행했을때, connection의 반복수행으로 인한 overhead로 일어나는 TimeLoss를 확인하기 위한 test입니다.  
+2. 동일 조건에서 SingleThreadConnecionPool과 multithreadedConnectionPool의 성능을 비교해보기 위한 test입니다.
+
+
+repo address:  
+https://github.com/nanaones/psycopg-test  
+
+Language: Python  
+Library: Psycopg,  configparser, pytz  
+Tool: Docker
+
+
+관여한 핵심기술
+- Dockerize  
+- Psycopg ConnectionPool
+- logging
+    - JSON
+    - CSV
+
+프로젝트 수행시 경험한 것
+1. TimeZone   
+    ElasticSearch에 time 태그를 통해서 데이터를 시계열로 저장하기 위해 time 라이브러리를 사용한 Logtime 을 기록하려 하였으나, TimeZone이 설정되어있지 않아 GMT 기준으로 시간이 설정되었습니다. pytz 라이브러리를 홯용하여 TimeZone을 맞추었습니다. 또한, 옵션을 통한 커스터마이징 기능을 구현하였습니다. 
+2. JSON  
+    시작시간에서 현재시간을 차감한 실제 소요시간을 String으로 지정하여 log를 불러오는데 문제가 있었습니다. json라이브러리의 dump 모듈을 통해서 json 파일을 남기는것으로 수정하였습니다.
+3. getenv  
+    configparser 라이브러리를 통해  config를 불러옵니다. Dockerize를 하면서 설정에 충돌이 일어나게 되었고, 이를 해결하기 위해서 configfile의 위치를 os의 환경변수에서 먼저 찾도록 수정하였습니다. 
+
+## Psycopg-test-docker-compose  
+
+psycopg-test 가 작업을 수행한 후 남는 로그 파일에 대한 실시간 분석을 위한 Docker-Compose 입니다.   
+Prometheus와 Prometheus-exporter(Fluentd, PostgreSQL)가 포함되어있어,  PostgreSQL container의 상태 변화를 실시간으로 확인할 수 있습니다. 
+
+repo address:  
+https://github.com/nanaones/psycopg-test-docker-compose 
+
+Language: Python  
+Library: Psycopg, configparser, pytz  
+Tool: Docker-compose, ElasticSearch, Fluentd, Prometheus, Grafana, Kibana, Prometheus-exporter(Fluentd, PostgreSQL)
+
+
+관여한 핵심기술
+- Compose system architecture  
+    Compose의 system architecture를 설계하였습니다.
+
+- Prometheus-exporter( PostgreSQL,  Fluentd )
+    Client단에서의 속도를 확인했던 psycopg-test와는 다르게, 속도 그래프의 시각화와는 별개로 PostgreSQL Container가 받는 부하또한 시각화를 통하여 실제 네트워크 전체가 받는 부하를 파악하고 싶었습니다. 
+
+프로젝트 수행시 경험한 것
+1. Prometheus Fluentd exporter  
+    링크 : https://github.com/fluent/fluentd-docs-gitbook/pull/119  
+    공식 Guide 대로 exporter를 설정하였으나, log에서 parameter error가 발생되는 것을 확인하였고, 이는 패키지의 의존성 문제임을 확인하였습니다. 이에따라 수정한 PullRequest를 Fluent repo에 push 하였으며, 이 수정이 반영되었습니다.
+    
+2. elasticsearch
+    elasticsearch가 부하를 견디지 못하고 Down 되는 경우가 족족 발생하였습니다. 이는 결국 EVM의 메모리가 부족한 현상임을 알게 되었고, bootstrap.memory_lock을 통해서 메모리가 스왑되는 현상을 막았고, ES_JAVA_OPTS을 2GB로 강제 할당하여 자동 종료를 막았습니다.
+
+3. 환경변수
+    Psycopg-test 에서 사용되는 변수들을 Dockerize 하면서 환경변수화 하였습니다. 단독으로 사용될때와 Compose에서 사용될 때 입력될 DBMS의 주소가 달라지기 때문에, 이를 환경변수로 받을 수 있도록 재수정하였습니다. 
+
+4. wait-for-it  
+    단독으로 사용되지 않는경우, Psycopg-test Container는 PostgreSQL Container가 올라온 이후에 실행되어야 합니다. 하지만 docker-compose는 순차적으로 Container를 실행시키는 옵션이 따로 존재하지 않습니다. 따라서 wait-for-it 이라는 3rdParty 스크립트를 통해 Psycopg-test Container에 부여된 DBMS 환경변수인 $DBMS_PORT,  $DBMS_ADDRESS 들로 DBMS Container의 정상 실행 유무를 확인하여, 정상적인 응답 유무에 따라 Psycopg-test Container가 실행되도록 하였습니다. 
