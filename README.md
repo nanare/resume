@@ -4,8 +4,6 @@
 
 
 # Work Experience
-  
-  
 ## Develop & Maintenance
 * ICON Tracker (Back-end) (https://tracker.icon.foundation/) --  [LINK](https://github.com/nanare/resume#icon-tracker-back-end-httpstrackericonfoundation)
     - Java(1.8) Spring
@@ -44,7 +42,9 @@
 
 ---
 
-# Work Experience
+# Detail
+
+# 1. Work Experience
 
 ### TxChallenge DashBoard Page Back-End
 
@@ -125,20 +125,20 @@ BlockChain Mainnet에 Deploy되는 SmartContract의 논리적, 구조적 결함�
 ---
 
 ### Blockchain training course for developers.
-포항공대 Mooc BlockChain Course 진행
+포항공대 Mooc BlockChain Course 기획, 제작, 진행
 [YouTube] https://www.youtube.com/playlist?list=PLXXmA0nccv9osZU0KERA3VvndG-TwVfVe
 
-ICON Workshops for Developer 진행
+ICON Workshops for Developer  기획, 제작, 진행
 [GitHub] https://github.com/icon-workshops
 
 Devstamp 발표
 [GitHub] https://github.com/icon-workshops/181218-devstamp
 
-StudyPie ICON BlockChain 진행
+StudyPie ICON BlockChain  기획, 제작, 진행
 
 ---
 
-# Side Project
+# 2. Side Project
 
 
 ## Psycopg-test 
@@ -195,10 +195,10 @@ Tool: Docker-compose, ElasticSearch, Fluentd, Prometheus, Grafana, Kibana, Prome
     링크 : https://github.com/fluent/fluentd-docs-gitbook/pull/119  
     공식 Guide 대로 exporter를 설정하였으나, log에서 parameter error가 발생되는 것을 확인하였고, 이는 패키지의 의존성 문제임을 확인하였습니다. 이에따라 수정한 PullRequest를 Fluent repo에 push 하였으며, 이 수정이 반영되었습니다.
     
-2. elasticsearch
+2. elasticsearch  
     elasticsearch가 부하를 견디지 못하고 Down 되는 경우가 족족 발생하였습니다. 이는 결국 EVM의 메모리가 부족한 현상임을 알게 되었고, bootstrap.memory_lock을 통해서 메모리가 스왑되는 현상을 막았고, ES_JAVA_OPTS을 2GB로 강제 할당하여 자동 종료를 막았습니다.
 
-3. 환경변수
+3. 환경변수  
     Psycopg-test 에서 사용되는 변수들을 Dockerize 하면서 환경변수화 하였습니다. 단독으로 사용될때와 Compose에서 사용될 때 입력될 DBMS의 주소가 달라지기 때문에, 이를 환경변수로 받을 수 있도록 재수정하였습니다. 
 
 4. wait-for-it  
