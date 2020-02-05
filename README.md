@@ -16,15 +16,15 @@
     - gunicorn
     - PostgreSQL, Psycopg
 
+* 조력발전소 운영에 따른 해양물리변화 장기 조사연구  --  [LINK](https://github.com/nanare/resume#조력발전소-운영에-따른-해양물리변화-장기-조사연구)
+    - 결측값 처리
+
 ## Public BlockChain
 * ICON(Public BlockChain) SmartContractAudit  --  [LINK](https://github.com/nanare/resume#iconpublic-blockchain-smartcontractaudit)
 * ICON SmartContractAuditTool Develop --  [LINK](https://github.com/nanare/resume#icon-smartcontractaudit-tool-develop)
     - python
     - pylint, astroid
 * Blockchain training course for developers.   --  [LINK](https://github.com/nanare/resume#blockchain-training-course-for-developers)
-
-* 조력발전소 운영에 따른 해양물리변화 장기 조사연구  --  [LINK](https://github.com/nanare/resume#조력발전소-운영에-따른-해양물리변화-장기-조사연구)
-    - 결측값 처리
 
 # Side Project  
 
