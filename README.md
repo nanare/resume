@@ -27,6 +27,8 @@
     - pylint, astroid
 * Blockchain training course for developers.   --  [LINK](https://github.com/nanare/resume#blockchain-training-course-for-developers)
 
+* 시화 조력발전소 환경 조사  --  [LINK](https://github.com/nanare/resume#%EC%8B%9C%ED%99%94-%EC%A1%B0%EB%A0%A5%EB%B0%9C%EC%A0%84%EC%86%8C-%ED%99%98%EA%B2%BD-%EC%A1%B0%EC%82%AC)
+    - 결측값 처리
 
 # Side Project  
 
