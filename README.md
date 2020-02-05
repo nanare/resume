@@ -39,6 +39,12 @@
 - PostgreSQL
 - Docker-compose, ElasticSearch, Fluentd, Prometheus, Grafana, Kibana, Fluentd-exporter(Fluentd, PostgreSQL)
 
+## 카카오톡 납품관리기  --  [LINK](https://github.com/nanare/resume#카카오톡_납품관리기)
+- Python
+- PostgreSQL
+- PIL
+- Flask
+
 
 ---
 
@@ -204,3 +210,34 @@ Tool: Docker-compose, ElasticSearch, Fluentd, Prometheus, Grafana, Kibana, Prome
 4. wait-for-it  
     단독으로 사용되지 않는경우, Psycopg-test Container는 PostgreSQL Container가 올라온 이후에 실행되어야 합니다. 하지만 docker-compose는 순차적으로 Container를 실행시키는 옵션이 따로 존재하지 않습니다. 따라서 wait-for-it 이라는 3rdParty 스크립트를 통해 Psycopg-test Container에 부여된 DBMS 환경변수인 $DBMS_PORT,  $DBMS_ADDRESS 들로 DBMS Container의 정상 실행 유무를 확인하여, 정상적인 응답 유무에 따라 Psycopg-test Container가 실행되도록 하였습니다. 
 
+
+## 카카오톡 납품관리기 
+
+소상공인을 위한 납품관리기입니다.
+카카오톡 플러스친구에게 거래처에 납품한 이미지를 전송하게 되면 전송된 이미지의 좌표(Lon, Lat)를 사진의 EXchangable Image File format(EXIF)에서 읽어들입니다. 전송된 이미지는 서버에 별도로 저장되며, 이미지의 저장위치와 이미지의 좌표(Lon, Lat)은 DBMS에 저장됩니다.
+
+Language: Python  
+FrameWork: Flask
+Library: Psycopg, PIL, pytz  
+Tool: Docker
+
+관여한 핵심기술
+- System architecture  
+    System architecture를 설계하였습니다.
+
+- 이미지 데이터와 위치정보의 저장  
+    카카오톡 API에 업로드된 이미지 데이터를 서버에 저장함과 동시에 위치정보(Lon, Lat)을 저장합니다. urllib 라이브러리를 통해서 작성되었습니다. 
+
+- WAS 개발  
+    Flask를 활용한 WAS를 개발하였습니다. 
+
+- DB Table 설계  
+    DBMS 선정과 Table을 직접 설계했습니다.
+
+
+프로젝트 수행시 경험한 것
+
+GPS 측정 오차  
+   이미지 파일의 EXIF 데이터에 입력되는 GPS 정보는 핸드폰이 현재 위치를 GPS 위성신호에 따라 측정한 정확도 있는 정보일 수 있지만, 빌딩이 많거나, 주변에 장애물이 많은경우, 지하인 경우에는 GPS 정보가 정확하지 않았습니다. 이에따라 초기에 기획하였던 GPS 위치를 기반으로 업체를 추정하여 기록하는 방식은 포기하게 되었습니다.
+
+[!]()
