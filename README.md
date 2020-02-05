@@ -1,20 +1,26 @@
 
 
+# About nanaones
 
-
-# WAS Develop & Maintenance
+# Work Experience
+  
+  
+## WAS Develop & Maintenance
 * ICON Tracker (Back-end) (https://tracker.icon.foundation/) --  [LINK](https://github.com/nanare/resume#icon-tracker-back-end-httpstrackericonfoundation)
 * ICON FoundationHomePage (https://icon.foundation/?lang=en) --  [LINK](https://github.com/nanare/resume#icon-foundationhomepage-httpsiconfoundationlangen)
 * TxChallenge DashBoard Page Back-End (deprecated) --  [LINK](https://github.com/nanare/resume#txchallenge-dashboard-page-back-end)
 
-# Public BlockChain
+## Public BlockChain
 * ICON(Public BlockChain) SmartContractAudit  --  [LINK](https://github.com/nanare/resume#iconpublic-blockchain-smartcontractaudit)
 * ICON SmartContractAuditTool Develop --  [LINK](https://github.com/nanare/resume#icon-smartcontractaudit-tool-develop)
 * Blockchain training course for developers.   --  [LINK](https://github.com/nanare/resume#blockchain-training-course-for-developers)
 
+# Side Project  
+TBD
+
 ---
 
-## TxChallenge DashBoard Page Back-End
+### TxChallenge DashBoard Page Back-End
 
  비동기 WAS 적용 및 비동기 배치 적용
 
@@ -40,7 +46,7 @@ gunicorn & gevent Based Asynchronous RESTful API
 
 ---
 
-## ICON Tracker (Back-end) (https://tracker.icon.foundation/)
+### ICON Tracker (Back-end) (https://tracker.icon.foundation/)
 Language: Java(1.8)  
 FrameWork: Spring  
 WebServer: tomcat  
@@ -49,7 +55,7 @@ RESTful API maintenance
 
 ---
 
-## ICON FoundationHomePage (https://icon.foundation/?lang=en)
+### ICON FoundationHomePage (https://icon.foundation/?lang=en)
 Language: Java(1.8)  
 FrameWork: Spring  
 WebServer: tomcat  
@@ -57,7 +63,7 @@ JSP Page maintenance
 
 ---
 
-## ICON SmartContractAudit Tool Develop  
+### ICON SmartContractAudit Tool Develop  
 ICON Network에 등록되는 SmartContract의 정적 분석을 수행하는 Audit Tool 개발 ( Back-end, AWS Part )
 
 
@@ -80,7 +86,7 @@ Tool: Docker, AWS(AppSync, Lambda, S3, DynamoDB)
 
 ---
 
-## ICON(Public BlockChain) SmartContractAudit
+### ICON(Public BlockChain) SmartContractAudit
 
 ICON Network에 등록되는 SmartContract의 검사수행  
 SmartContract의 Logic과 Contract의 무결성 검사수행
@@ -92,7 +98,7 @@ BlockChain Mainnet에 Deploy되는 SmartContract의 논리적, 구조적 결함�
 
 ---
 
-## Blockchain training course for developers.
+### Blockchain training course for developers.
 포항공대 Mooc BlockChain Course 진행
 [YouTube] https://www.youtube.com/playlist?list=PLXXmA0nccv9osZU0KERA3VvndG-TwVfVe
 
