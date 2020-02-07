@@ -117,12 +117,12 @@ Tool: Docker-compose, ElasticSearch, Fluentd, Prometheus, Grafana, Kibana, Prome
 
 소상공인을 위한 납품관리기 개발
 
+Library: Psycopg, PIL, pytz
+Tool: Docker
+
 - 사내 시스템구축으로 인한 쳬계 정립
-
 - System architecture 설계
-
 - 이미지데이터 및 위치정보 추출과 저장
-
-- API Server 개발  
+- API Server 개발
 
 - [서버저장기 image](https://github.com/nanare/resume/blob/master/img/%EC%84%9C%EB%B2%84%EC%A0%80%EC%9E%A5%EA%B8%B0_%EC%88%98%EC%A0%95.jpg)
