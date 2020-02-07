@@ -2,13 +2,11 @@
 # Work Experience
 ## Develop & Maintenance
 * ICON Tracker (Back-end) (https://tracker.icon.foundation/) --  [LINK](https://github.com/nanare/resume#icon-tracker-back-end-httpstrackericonfoundation)
-    - Java(1.8) Spring
-    - Tomcat
+    - Java8 SpringBoot
     - MySQL, Mybatis
 
 * ICON FoundationHomePage (https://icon.foundation/?lang=en) --  [LINK](https://github.com/nanare/resume#icon-foundationhomepage-httpsiconfoundationlangen)
-    - Java(1.8) Spring
-    - Tomcat
+    - Java8 SpringBoot
     - MySQL(AWS RDS), Mybatis
 
 * TxChallenge DashBoard Page Back-End (deprecated) --  [LINK](https://github.com/nanare/resume#txchallenge-dashboard-page-back-end)
@@ -52,7 +50,7 @@
 
 ### TxChallenge DashBoard Page Back-End
 
- 비동기 WAS 적용 및 비동기 배치 적용
+Async 
 
 Language: Python  
 FrameWork: Flask(Python)  
@@ -64,7 +62,7 @@ gunicorn & gevent Based Asynchronous RESTful API
 
 관여한 핵심기술
 - NginX, gunicorn(gevent worker)을 도입하여 API 의 RPS(Requests Per Secound)를 기존의 4배로 향상시킬 수 있었습니다. 
-- NginX를 도입하면서, 비동기로 동작하는 WAS의 구현 방법과 모니터링 방법, 성능 최적화에 대한 내용을 배울 수 있었습니다.
+- NginX를 도입하면서, 비동기로 동작하는 API Server의 구현 방법과 모니터링 방법, 성능 최적화에 대한 내용을 배울 수 있었습니다.
 - PostgreSQL 을 사용하여 Transaction 데이터를 기록하였습니다.
 - Python Async방식의 Batch 프로그램을 활용한 DB 축적 (aiohttp, Psycopg 사용)
 
@@ -77,18 +75,16 @@ gunicorn & gevent Based Asynchronous RESTful API
 ---
 
 ### ICON Tracker (Back-end) (https://tracker.icon.foundation/)
-Language: Java(1.8)  
-FrameWork: Spring  
-WebServer: tomcat  
+Language: Java8
+FrameWork: SpringBoot
 DBMS: MySQL  
 RESTful API maintenance
 
 ---
 
 ### ICON FoundationHomePage (https://icon.foundation/?lang=en)
-Language: Java(1.8)  
-FrameWork: Spring  
-WebServer: tomcat  
+Language: Java8
+FrameWork: SpringBoot
 JSP Page maintenance  
 
 ---
@@ -110,9 +106,9 @@ Tool: Docker, AWS(AppSync, Lambda, S3, DynamoDB)
 
 프로젝트 수행시 경험한 것
 1. Dockerize  
- Flask를 사용한 API를 작성하였을때, Key와 같은 민감한 데이터는 모두 Configparser 라이브러리를 사용하여 config.ini 로 불러왔지만, 사용되는 설정옵션이 분리되어 관리의 용이성이 떨어지고, 가독성이 떨어져, WAS를 Dockerize 할 때 에는 Dockerize 라이브러리를 사용하여 Docker Ccontainer의 환경변수로 설정하였습니다.
+ Flask를 사용한 API를 작성하였을때, Key와 같은 민감한 데이터는 모두 Configparser 라이브러리를 사용하여 config.ini 로 불러왔지만, 사용되는 설정옵션이 분리되어 관리의 용이성이 떨어지고, 가독성이 떨어져, API Server를 Dockerize 할 때 에는 Dockerize 라이브러리를 사용하여 Docker Ccontainer의 환경변수로 설정하였습니다.
 2. Ci/CD  
- 만들어진 WAS 에 각 EndPoint 마다 Apache Bench 를 사용한 테스트가 이루어졌습니다. AB의 결과를 Slack으로 보내주며, 사용자의 승인에 의해서 카나리 Server에 배포되며, 일정기간 테스트가 끝나면 MainServer에 배포했습니다. 
+ 만들어진 API Server 에 각 EndPoint 마다 Apache Bench 를 사용한 테스트가 이루어졌습니다. AB의 결과를 Slack으로 보내주며, 사용자의 승인에 의해서 카나리 Server에 배포되며, 일정기간 테스트가 끝나면 MainServer에 배포했습니다. 
 
 ---
 
@@ -225,10 +221,10 @@ Tool: Docker-compose, ElasticSearch, Fluentd, Prometheus, Grafana, Kibana, Prome
 ## 카카오톡 납품관리기 
 
 소상공인을 위한 납품관리기입니다.
-카카오톡 플러스친구에게 거래처에 납품한 이미지를 전송하게 되면 전송된 이미지의 좌표(Lon, Lat)를 사진의 EXchangable Image File format(EXIF)에서 읽어들입니다. 전송된 이미지는 서버에 별도로 저장되며, 이미지의 저장위치와 이미지의 좌표(Lon, Lat)은 DBMS에 저장됩니다.
+카카오톡 플러스친구에게 거래처에 납품한 이미지를 전송하게 되면 전송된 이미지의 좌표(Lon, Lat)를 사진의 EXIF(EXchangable Image File format)에서 읽어들입니다. 전송된 이미지는 서버에 별도로 저장되며, 이미지의 저장위치와 이미지의 좌표(Lon, Lat)은 DBMS에 저장됩니다.
 
 Language: Python  
-FrameWork: Flask
+FrameWork: Flask  
 Library: Psycopg, PIL, pytz  
 Tool: Docker
 
@@ -239,8 +235,8 @@ Tool: Docker
 - 이미지 데이터와 위치정보의 저장  
     카카오톡 API에 업로드된 이미지 데이터를 서버에 저장함과 동시에 위치정보(Lon, Lat)을 저장합니다. urllib 라이브러리를 통해서 작성되었습니다. 
 
-- WAS 개발  
-    Flask를 활용한 WAS를 개발하였습니다. 
+- API Server 개발  
+    Flask를 활용한 API Server를 개발하였습니다. 
 
 - DB Table 설계  
     DBMS 선정과 Table을 직접 설계했습니다.
