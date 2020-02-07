@@ -1,5 +1,4 @@
 
-# Work Experience
 # 1. Work Experience
 ## Technical Stack
 Language: Python, Java8  
